@@ -1,5 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Transition from '../utils/Transition.js';
+import {ReactComponent as CheckMark} from '../images/checkmark.svg';
+import {ReactComponent as Rating} from '../images/icon-rating.svg';
+import {ReactComponent as TrustPilot} from '../images/five-star-trust-pilot.svg';
+
 
 function Features() {
 
@@ -28,125 +32,52 @@ function Features() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-12 md:pt-20">
 
-          {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">Explore the solutions</h1>
-            <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
-          </div>
-
           {/* Section content */}
           <div className="md:grid md:grid-cols-12 md:gap-6">
 
             {/* Content */}
             <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6" data-aos="fade-right">
-              <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <h3 className="h3 mb-3">Powerful suite of tools</h3>
-                <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
-              </div>
-              {/* Tabs buttons */}
-              <div className="mb-8 md:mb-0">
-                <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 1 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
-                  href="#0"
-                  onClick={(e) => { e.preventDefault(); setTab(1); }}
-                >
-                  <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Building the Simple ecosystem</div>
-                    <div className="text-gray-600">Take collaboration to the next level with security and administrative features built for teams.</div>
+              <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8 body-left">
+                <h1 className="h2 mb-4">Time is Running Out! Maximize Your COVID Relief Funds</h1>
+                <ul className="benefits">
+                  <li><CheckMark /> Get up to 2.5x monthly payroll costs</li>
+                  <li><CheckMark /> 100% fully forgivable loan potential</li>
+                  <li><CheckMark /> Impacted businesses get up to $33,000 per employee</li>
+                  <li><CheckMark /> SBA programs up to $500,000</li>
+                </ul>
+                <div className="grid grid-cols-2">
+                  <div className="mx-auto">
+                    <Rating width="125px" height="125px" />
                   </div>
-                  <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.953 4.29a.5.5 0 00-.454-.292H6.14L6.984.62A.5.5 0 006.12.173l-6 7a.5.5 0 00.379.825h5.359l-.844 3.38a.5.5 0 00.864.445l6-7a.5.5 0 00.075-.534z" />
-                    </svg>
+                  <div className="mx-auto">
+                    <TrustPilot width="125px" height="125px" />
                   </div>
-                </a>
-                <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 2 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
-                  href="#0"
-                  onClick={(e) => { e.preventDefault(); setTab(2); }}
-                >
-                  <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Building the Simple ecosystem</div>
-                    <div className="text-gray-600">Take collaboration to the next level with security and administrative features built for teams.</div>
-                  </div>
-                  <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.854.146a.5.5 0 00-.525-.116l-11 4a.5.5 0 00-.015.934l4.8 1.921 1.921 4.8A.5.5 0 007.5 12h.008a.5.5 0 00.462-.329l4-11a.5.5 0 00-.116-.525z" fillRule="nonzero" />
-                    </svg>
-                  </div>
-                </a>
-                <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 3 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
-                  href="#0"
-                  onClick={(e) => { e.preventDefault(); setTab(3); }}
-                >
-                  <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Building the Simple ecosystem</div>
-                    <div className="text-gray-600">Take collaboration to the next level with security and administrative features built for teams.</div>
-                  </div>
-                  <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M11.334 8.06a.5.5 0 00-.421-.237 6.023 6.023 0 01-5.905-6c0-.41.042-.82.125-1.221a.5.5 0 00-.614-.586 6 6 0 106.832 8.529.5.5 0 00-.017-.485z" fill="#191919" fillRule="nonzero" />
-                    </svg>
-                  </div>
-                </a>
+                </div>
+                <p className="disclosures">Rates for the Paycheck Protection Program (“PPP”) are at 1%. PPP loans are made by one or more approved U.S. Small Business Administration (“SBA”) lenders. Loan agreements will identify the appropriate lender to small businesses at signing. Funds are limited, and may not be available at this time. Once funds are available, qualified applications will be submitted to the SBA. BlueVine does not guarantee that applications will be processed and submitted before PPP funds are no longer available. There are no fees for applying for PPP. Approval and loan forgiveness are subject to your ability to meet government-set eligibility requirements.</p>
+                <p className="disclosures">To help the government fight financial crime, Federal regulation requires certain financial institutions to obtain, verify, and record information about the beneficial owners of legal entity customers at the time a new account is opened. Legal entities can be abused to disguise involvement in terrorist financing, money laundering, tax evasion, corruption, fraud, and other financial crimes. Requiring the disclosure of key individuals who own or control a legal entity (i.e., the beneficial owners) helps law enforcement investigate and prosecute these crimes.</p>
+                <p className="disclosures">Please note, the SBA has limited loan forgiveness for applicants who are self employed. Per SBA rules, if you do not have formal business expenses that you report on your Schedule C, you will be limited to having 75% of your loan forgiven.</p>
               </div>
             </div>
 
-            {/* Tabs items */}
-            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1" data-aos="zoom-y-out" ref={tabs}>
+            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1 pt-24" data-aos="zoom-y-out" ref={tabs}>
               <div className="relative flex flex-col text-center lg:text-right">
-                {/* Item 1 */}
-                <Transition
-                  show={tab === 1}
-                  appear={true}
-                  className="w-full"
-                  enter="transition ease-in-out duration-700 transform order-first"
-                  enterStart="opacity-0 translate-y-16"
-                  enterEnd="opacity-100 translate-y-0"
-                  leave="transition ease-in-out duration-300 transform absolute"
-                  leaveStart="opacity-100 translate-y-0"
-                  leaveEnd="opacity-0 -translate-y-16"
-                >
-                  <div className="relative inline-flex flex-col">
-                    <img className="md:max-w-none mx-auto rounded" src={require('../images/features-bg.png').default} width="500" height="462" alt="Features bg" />
-                    <img className="md:max-w-none absolute w-full left-0 transform animate-float" src={require('../images/features-element.png').default} width="500" height="44" alt="Element" style={{ top: '30%' }} />
-                  </div>
-                </Transition>
-                {/* Item 2 */}
-                <Transition
-                  show={tab === 2}
-                  appear={true}
-                  className="w-full"
-                  enter="transition ease-in-out duration-700 transform order-first"
-                  enterStart="opacity-0 translate-y-16"
-                  enterEnd="opacity-100 translate-y-0"
-                  leave="transition ease-in-out duration-300 transform absolute"
-                  leaveStart="opacity-100 translate-y-0"
-                  leaveEnd="opacity-0 -translate-y-16"
-                >
-                  <div className="relative inline-flex flex-col">
-                    <img className="md:max-w-none mx-auto rounded" src={require('../images/features-bg.png').default} width="500" height="462" alt="Features bg" />
-                    <img className="md:max-w-none absolute w-full left-0 transform animate-float" src={require('../images/features-element.png').default} width="500" height="44" alt="Element" style={{ top: '30%' }} />
-                  </div>
-                </Transition>
-                {/* Item 3 */}
-                <Transition
-                  show={tab === 3}
-                  appear={true}
-                  className="w-full"
-                  enter="transition ease-in-out duration-700 transform order-first"
-                  enterStart="opacity-0 translate-y-16"
-                  enterEnd="opacity-100 translate-y-0"
-                  leave="transition ease-in-out duration-300 transform absolute"
-                  leaveStart="opacity-100 translate-y-0"
-                  leaveEnd="opacity-0 -translate-y-16"
-                >
-                  <div className="relative inline-flex flex-col">
-                    <img className="md:max-w-none mx-auto rounded" src={require('../images/features-bg.png').default} width="500" height="462" alt="Features bg" />
-                    <img className="md:max-w-none absolute w-full left-0 transform animate-float" src={require('../images/features-element.png').default} width="500" height="44" alt="Element" style={{ top: '30%' }} />
-                  </div>
-                </Transition>
+                <form className="w-full lg:w-auto">
+                  <input type="text" className="w-full appearance-none border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-4 sm:mr-2 text-white placeholder-gray-500" placeholder="First Name" aria-label="First Name" />
+                  <input type="text" className="w-full appearance-none border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-4 sm:mr-2 text-white placeholder-gray-500" placeholder="Last Name" aria-label="Last Name" />
+                  <input type="text" className="w-full appearance-none border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-4 sm:mr-2 text-white placeholder-gray-500" placeholder="E-Mail" aria-label="E-Mail" />
+                  <input type="email" className="w-full appearance-none border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-4  sm:mr-2 text-white placeholder-gray-500" placeholder="Company" aria-label="Company" />
+                  <input type="tel" className="w-full appearance-none border border-gray-700 focus:border-gray-600 rounded-sm px-4 py-3 mb-4 sm:mr-2 text-white placeholder-gray-500" placeholder="Phone" aria-label="Phone" />
+                  <select className="w-full mb-4">
+                    <option value="">How Many Employees</option>
+                    <option value="1-24">1-24</option>
+                    <option value="25-49">25-49</option>
+                    <option value="50-99">50-99</option>
+                    <option value="100-249">100-249</option>
+                    <option value="250-499">250-499</option>
+                    <option value="500+">500+</option>
+                  </select>
+                  <input className="w-full px-4 py-3 bg-blue-500 text-white rounded-full" type="submit" value="Get Started" />
+                </form>
               </div>
             </div >
 
